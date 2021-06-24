@@ -1,9 +1,9 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Text, Box, Section, Strong, Span, List } from "@quarkly/widgets";
+import { Theme, Link, Text, Box, Section, Strong } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
-import { RawHtml, Override, Menu, StackItem, Stack } from "@quarkly/components";
+import { RawHtml, Override, StackItem, Stack } from "@quarkly/components";
 import * as Components from "components";
 export default (() => {
 	return <Theme theme={theme}>
@@ -35,22 +35,6 @@ export default (() => {
 				>
 					WETAR
 				</Text>
-				<Menu
-					display="flex"
-					justify-content="center"
-					font="--base"
-					font-weight="700"
-					md-flex-direction="column"
-					md-align-items="center"
-					color="#f8eeee"
-				>
-					<Override slot="link" text-decoration="none" color="--light" padding="6px 12px" />
-					<Override slot="link-active" color="--primary" />
-					<Override slot="item" padding="6px" font="700 16px/24px --fontFamily-sans" color="#ffffff" />
-					<Override slot="link-index">
-						Home
-					</Override>
-				</Menu>
 			</Box>
 		</Section>
 		<Section
@@ -80,15 +64,27 @@ export default (() => {
 						</Strong>
 						DESIGN. DEVELOP. MARKET.
 						<br />
-						{"\n\n"}
 					</Text>
 				</StackItem>
 			</Stack>
-			<Components.QuarklycommunityKitLoopText slides="Social Media Marketing,SEO,Web Apps,Ecommerce Stores,Websites" color="#000306">
-				<Override slot="Looped Text" border-color="#000306" />
-				<Override slot="After Text" />
+			<Components.QuarklycommunityKitLoopText slides="Digital Marketing,SEO,Web Apps,Ecommerce Stores,Websites" color="#000000">
+				<Override slot="After Text">
+					.
+				</Override>
 				<Override slot="Before Text">
 					We Do
+				</Override>
+				<Override slot="Looped Text">
+					<div>
+						<div transition="width 150ms linear 0s" height="50px" width="148.297px">
+							<div opacity="0" transform="translateY(-49.9993px)" position="absolute">
+								fastest
+							</div>
+							<div opacity="1" transform="translateY(0.00071887px)" position="absolute">
+								coolest
+							</div>
+						</div>
+					</div>
 				</Override>
 			</Components.QuarklycommunityKitLoopText>
 		</Section>
@@ -128,155 +124,7 @@ export default (() => {
 			>
 				Services and Pricings
 			</Text>
-			<Stack
-				margin-top="40px"
-				margin="0 0px 0 0px"
-				display="flex"
-				justify-content="space-around"
-				width="max-content"
-				max-width="max-content"
-				flex-wrap="wrap"
-				min-width="max-content"
-				lg-flex-wrap="wrap"
-				lg-justify-content="space-between"
-				lg-display="grid"
-				flex-direction="column-reverse"
-			>
-				<StackItem
-					width="50%"
-					lg-width="100%"
-					sm-width="100%"
-					background="#f4dd54"
-					border-style="solid"
-					border-width="8px"
-				>
-					<Override slot="StackItemContent" flex-direction="column" />
-					<Box height="0" margin="0 0 20px 0" padding-bottom="100%" background="url(https://uploads.quarkly.io/60d350285179a1001e683fe8/images/64323-web-design.gif?v=2021-06-23T16:11:22.496Z) 50% 0/cover no-repeat" />
-					<Text color="#DE350B" margin="0" font="16px --fontFamily-sans" text-align="center">
-						For personal sites, Hobby sites, Business sites, Product sites.
-						<br />
-					</Text>
-					<Text
-						as="h3"
-						font="normal 500 20px/1.0 --fontFamily-googleOpenSans"
-						margin="5px 0 20px 0"
-						text-align="center"
-						text-transform="uppercase"
-						letter-spacing="initial"
-						background="#090000"
-						color="#ece0e0"
-						padding="15px 0px 15px 0px"
-					>
-						Website Starter
-						<br />
-					</Text>
-					<List font="200 16px sans-serif">
-						<Text>
-							<Strong>
-								Static website,
-							</Strong>
-						</Text>
-						<Text>
-							<Strong>
-								Unlimited Bandwith{" "}
-							</Strong>
-						</Text>
-						<Text>
-							<Strong>
-								Free SSL
-							</Strong>
-						</Text>
-						<Text>
-							<Strong>
-								High Load time and Speed
-							</Strong>
-						</Text>
-						<Text>
-							<Strong>
-								99.9% Uptime and{" "}
-								<Span
-									overflow-wrap="normal"
-									word-break="normal"
-									white-space="normal"
-									text-indent="0"
-									text-overflow="clip"
-									hyphens="manual"
-								>
-									Unmatched performance
-								</Span>
-								{" "}
-							</Strong>
-						</Text>
-					</List>
-				</StackItem>
-				<StackItem
-					width="50%"
-					lg-width="100%"
-					sm-width="100%"
-					background="#f4dd54"
-					border-style="solid"
-					border-width="8px"
-				>
-					<Override slot="StackItemContent" flex-direction="column" />
-					<Box height="0" margin="0 0 20px 0" padding-bottom="100%" background="url(https://uploads.quarkly.io/60d350285179a1001e683fe8/images/64323-web-design.gif?v=2021-06-23T16:11:22.496Z) 50% 0/cover no-repeat" />
-					<Text color="#DE350B" margin="0" font="16px --fontFamily-sans" text-align="center">
-						For personal sites, Hobby sites, Business sites, Product sites.
-						<br />
-					</Text>
-					<Text
-						as="h3"
-						font="normal 500 20px/1.0 --fontFamily-googleOpenSans"
-						margin="5px 0 20px 0"
-						text-align="center"
-						text-transform="uppercase"
-						letter-spacing="initial"
-						background="#090000"
-						color="#ece0e0"
-						padding="15px 0px 15px 0px"
-					>
-						Website Starter
-						<br />
-					</Text>
-					<List font="200 16px sans-serif">
-						<Text>
-							<Strong>
-								Static website,
-							</Strong>
-						</Text>
-						<Text>
-							<Strong>
-								Unlimited Bandwith{" "}
-							</Strong>
-						</Text>
-						<Text>
-							<Strong>
-								Free SSL
-							</Strong>
-						</Text>
-						<Text>
-							<Strong>
-								High Load time and Speed
-							</Strong>
-						</Text>
-						<Text>
-							<Strong>
-								99.9% Uptime and{" "}
-								<Span
-									overflow-wrap="normal"
-									word-break="normal"
-									white-space="normal"
-									text-indent="0"
-									text-overflow="clip"
-									hyphens="manual"
-								>
-									Unmatched performance
-								</Span>
-								{" "}
-							</Strong>
-						</Text>
-					</List>
-				</StackItem>
-			</Stack>
+			<Components.Pricings1 />
 		</Section>
 		<Link
 			font={"--capture"}
