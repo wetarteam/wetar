@@ -1,10 +1,10 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Text, Box, Section, Strong, Icon, Span, List } from "@quarkly/widgets";
+import { Theme, Link, Text, Box, Section, Strong, Span, List } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
 import { RawHtml, Override, Menu, StackItem, Stack } from "@quarkly/components";
-import { MdArrowDownward } from "react-icons/md";
+import * as Components from "components";
 export default (() => {
 	return <Theme theme={theme}>
 		<GlobalQuarklyPageStyles pageUrl={"index"} />
@@ -65,20 +65,32 @@ export default (() => {
 					<Override slot="StackItemContent" flex-direction="column" color="#ebf1f8" />
 					<Text color="--dark" letter-spacing="1px" text-transform="uppercase" margin="0">
 						<Strong>
-							WebSITE is the BEST MARKETING AGENT
+							WebSITE IS the BEST MARKETING AGENT
 						</Strong>
 					</Text>
-					<Text as="h1" font="--headline1" md-font="--headline2" margin="10px 0">
-						Striving for perfection in everything we do. Unparalleled service for everyone.
+					<Text
+						as="h1"
+						font="--headline1"
+						md-font="--headline2"
+						margin="10px 0"
+						width="max-content"
+					>
+						<Strong>
+							WE{" "}
+						</Strong>
+						DESIGN. DEVELOP. MARKET.
+						<br />
+						{"\n\n"}
 					</Text>
 				</StackItem>
 			</Stack>
-			<Box text-align="center" margin="96px 0 0 0">
-				<Text margin="8px 0" text-transform="uppercase">
-					Who we are
-				</Text>
-				<Icon category="md" margin="0 auto" icon={MdArrowDownward} />
-			</Box>
+			<Components.QuarklycommunityKitLoopText slides="Social Media Marketing,SEO,Web Apps,Ecommerce Stores,Websites" color="#000306">
+				<Override slot="Looped Text" border-color="#000306" />
+				<Override slot="After Text" />
+				<Override slot="Before Text">
+					We Do
+				</Override>
+			</Components.QuarklycommunityKitLoopText>
 		</Section>
 		<Section
 			padding="60px 0"
@@ -128,6 +140,7 @@ export default (() => {
 				lg-flex-wrap="wrap"
 				lg-justify-content="space-between"
 				lg-display="grid"
+				flex-direction="column-reverse"
 			>
 				<StackItem
 					width="50%"
@@ -142,7 +155,6 @@ export default (() => {
 					<Text color="#DE350B" margin="0" font="16px --fontFamily-sans" text-align="center">
 						For personal sites, Hobby sites, Business sites, Product sites.
 						<br />
-						{"\n\n"}
 					</Text>
 					<Text
 						as="h3"
@@ -157,7 +169,6 @@ export default (() => {
 					>
 						Website Starter
 						<br />
-						{"\n\n"}
 					</Text>
 					<List font="200 16px sans-serif">
 						<Text>
@@ -182,7 +193,7 @@ export default (() => {
 						</Text>
 						<Text>
 							<Strong>
-								99.9% Uptime and{" \n"}
+								99.9% Uptime and{" "}
 								<Span
 									overflow-wrap="normal"
 									word-break="normal"
@@ -193,7 +204,7 @@ export default (() => {
 								>
 									Unmatched performance
 								</Span>
-								{" \n\n"}
+								{" "}
 							</Strong>
 						</Text>
 					</List>
@@ -211,7 +222,6 @@ export default (() => {
 					<Text color="#DE350B" margin="0" font="16px --fontFamily-sans" text-align="center">
 						For personal sites, Hobby sites, Business sites, Product sites.
 						<br />
-						{"\n\n"}
 					</Text>
 					<Text
 						as="h3"
@@ -226,7 +236,6 @@ export default (() => {
 					>
 						Website Starter
 						<br />
-						{"\n\n"}
 					</Text>
 					<List font="200 16px sans-serif">
 						<Text>
@@ -251,7 +260,7 @@ export default (() => {
 						</Text>
 						<Text>
 							<Strong>
-								99.9% Uptime and{" \n"}
+								99.9% Uptime and{" "}
 								<Span
 									overflow-wrap="normal"
 									word-break="normal"
@@ -262,7 +271,7 @@ export default (() => {
 								>
 									Unmatched performance
 								</Span>
-								{" \n\n"}
+								{" "}
 							</Strong>
 						</Text>
 					</List>

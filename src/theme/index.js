@@ -152,7 +152,6 @@ export default {
 			}
 		}
 	},
-	"version": 1,
 	"fonts": {
 		"Open Sans": {
 			"family": "Open Sans",
@@ -173,5 +172,6 @@ export default {
 				]
 			}
 		}
-	}
+	},
+	"version": 2
 }
